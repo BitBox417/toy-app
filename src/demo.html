@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Document</title>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+<script
+
+crossorigin
+
+src="https://unpkg.com/react@18/umd/react.development.js"
+
+></script>
+
+<script
+
+crossorigin
+
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+
+></script>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const { useState } = React;
+
+function App() {
+
+const [email, setEmail] = useState('');
+
+const [password, setPassword] = useState('');
+
+const [userToken, setUserToken] = useState('');
+
+
+const url = 'https://vue3-course-api.hexschool.io/v2';
+
+const path = 'casper-hexschool';
+
+
+const login = () => {
+
+const user = {
+
+username: email,
+
+password: password,
+
+};
+
+
+axios
+
+.post(`${url}/admin/signin`, user)
+
+.then((res) => {
+
+console.log(res);
+
+const { token, expired } = res.data;
+
+console.log(token, expired);
+
+setUserToken(token);
+
+})
+
+.catch((error) => {
+
+console.error(error);
+
+});
+
+};
+
+
+const uploadFile = async (file) => {
+
+console.log(file);
+
+if (!file) {
+
+return
+
+}
+
+
+const formData = new FormData()
+
+formData.append('file-to-upload', file)
+
+
+try {
+
+const res = await axios.post(`${url}/api/${path}/admin/upload`, formData, {
+
+headers: {
+
+authorization: userToken
+
+}
+
+})
+
+console.log(res);
+
+} catch (error) {
+
+console.log(error);
+
+}
+
+}
+
+
+
+return (
+
+<div>
+
+<div>
+
+<input
+
+type='email'
+
+value={email}
+
+onChange={(e) => setEmail(e.target.value)}
+
+/>
+
+<input
+
+type='password'
+
+value={password}
+
+onChange={(e) => setPassword(e.target.value)}
+
+/>
+
+<button onClick={() => login()}>登入</button>
+
+</div>
+
+<div>
+
+檔案上傳
+
+<input type="file" onChange={(e) => uploadFile(e.target.files[0])} />
+
+</div>
+
+</div>
+
+);
+
+}
+
+
+ReactDOM.createRoot(document.querySelector('#root')).render(<App />);
+
+</script>
+
+</body>
+
+</html>
