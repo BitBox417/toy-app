@@ -1,9 +1,16 @@
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useReducer } from "react"; // 加入 useReducer import
+import Message from "../components/Message";
+import {
+  MessageContext,
+  initState,
+  messageReducer,
+} from "../store/messageStore";
 
 function Dashboard() {
   const navigate = useNavigate();
+  const [messageState, messageDispatch] = useReducer(messageReducer, initState); // 修正 useReducer 使用方式
 
   const logout = () => {
     document.cookie = "hexToken=;";
@@ -31,7 +38,12 @@ function Dashboard() {
     })();
   }, [navigate, token]);
   return (
-    <>
+    <MessageContext.Provider
+      value={{ state: messageState, dispatch: messageDispatch }}
+    >
+      {" "}
+      {/* 修正 Provider value */}
+      <Message />
       <nav className="navbar navbar-expand-lg bg-dark">
         <div className="container-fluid">
           <p className="text-white mb-0">HEX EATS 後台管理系統</p>
@@ -92,7 +104,7 @@ function Dashboard() {
         </div>
         <div className="w-100">{token && <Outlet />}</div>
       </div>
-    </>
+    </MessageContext.Provider>
   );
 }
 

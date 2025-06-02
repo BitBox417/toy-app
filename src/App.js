@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Dashboard from "./admin/Dashboard";
 import AdminProducts from "./admin/AdminProducts";
 import AdminCoupons from "./admin/AdminCoupons";
+import AdminOrders from "./admin/AdminOrders";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="products" element={<AdminProducts />} />
           {/* 可以添加其他子路由 */}
           <Route path="coupons" element={<AdminCoupons />} />
-          <Route path="orders" element={<div>訂單頁面</div>} />
+          <Route path="orders" element={<AdminOrders />} />
         </Route>
       </Routes>
     </div>

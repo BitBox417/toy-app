@@ -1,5 +1,10 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import {
+  MessageContext,
+  handleErrorMessage,
+  handleSuccessMessage,
+} from "../store/messageStore";
 
 function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
   const [tempData, setTempData] = useState({
@@ -14,6 +19,9 @@ function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
     imageUrl: "",
   });
 
+  // 修復：正確解構 Context
+  const { dispatch } = useContext(MessageContext);
+
   useEffect(() => {
     if (type === "create") {
       setTempData({
@@ -27,7 +35,8 @@ function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
         is_enabled: 1,
         imageUrl: "",
       });
-    } else if (type === "edit") {
+    } else if (type === "edit" && tempProduct) {
+      // 修復：添加 tempProduct 存在性檢查
       setTempData(tempProduct);
     }
   }, [type, tempProduct]);
@@ -63,11 +72,12 @@ function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
       const res = await axios[method](api, {
         data: tempData,
       });
-      console.log(res);
+      handleSuccessMessage(dispatch, res);
       closeProductModal();
       getProduct();
     } catch (error) {
       console.log(error);
+      handleErrorMessage(dispatch, error);
     }
   };
 
@@ -85,7 +95,7 @@ function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
             <h1 className="modal-title fs-5" id="exampleModalLabel">
               {type === "create"
                 ? "建立新商品"
-                : `編輯商品 ${tempProduct.title}`}
+                : `編輯商品 ${tempProduct?.title || ""}`}
             </h1>
             <button
               type="button"
@@ -106,6 +116,8 @@ function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
                       id="image"
                       placeholder="請輸入圖片連結"
                       className="form-control"
+                      onChange={handleChange}
+                      value={tempData.imageUrl}
                     />
                   </label>
                 </div>
@@ -119,7 +131,11 @@ function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
                     />
                   </label>
                 </div>
-                <img src="" alt="" className="img-fluid" />
+                <img
+                  src={tempData.imageUrl || ""}
+                  alt=""
+                  className="img-fluid"
+                />
               </div>
               <div className="col-sm-8">
                 <div className="form-group mb-2">
@@ -155,7 +171,7 @@ function ProductModal({ closeProductModal, getProduct, type, tempProduct }) {
                     <label className="w-100" htmlFor="unit">
                       單位
                       <input
-                        type="unit"
+                        type="text"
                         id="unit"
                         name="unit"
                         placeholder="請輸入單位"
