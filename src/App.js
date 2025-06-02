@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./admin/Dashboard";
 import AdminProducts from "./admin/AdminProducts";
+import AdminCoupons from "./admin/AdminCoupons";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           {/* 子路由會渲染在 Dashboard 的 <Outlet /> 中 */}
           <Route path="products" element={<AdminProducts />} />
           {/* 可以添加其他子路由 */}
-          <Route path="coupons" element={<div>優惠券頁面</div>} />
+          <Route path="coupons" element={<AdminCoupons />} />
           <Route path="orders" element={<div>訂單頁面</div>} />
         </Route>
       </Routes>
