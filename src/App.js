@@ -5,12 +5,18 @@ import Dashboard from "./admin/Dashboard";
 import AdminProducts from "./admin/AdminProducts";
 import AdminCoupons from "./admin/AdminCoupons";
 import AdminOrders from "./admin/AdminOrders";
+import FrontLayout from "./pages/front/FrontLayout";
+import Home from "./pages/front/Home";
+import Products from "./pages/front/Products";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        {/* 根路徑重定向到登入頁面 */}
+        <Route path="/" element={<FrontLayout />}>
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+        </Route>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
 
