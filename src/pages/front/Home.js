@@ -5,20 +5,22 @@ function Home() {
         <div className="row flex-md-row-reverse flex-column">
           <div className="col-md-6">
             <img
-              src="https://images.unsplash.com/photo-1526038335545-4b96864eaee7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80
+              src="https://images.unsplash.com/photo-1605192704979-2bb15327c206?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRveXxlbnwwfHwwfHx8MA%3D%3D
             alt="
               className="img-fluid"
               alt="..."
             />
           </div>
           <div className="col-md-6 d-flex flex-column justify-content-center mt-md-0 mt-3">
-            <h2 className="fw-bold">Lorem ipsum dolor sit</h2>
+            <h2 className="fw-bold"></h2>
             <h5 className="font-weight-normal text-muted mt-2">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor
+              陪你長大的，不只是玩具，是一段段童年的故事。
+              我們相信，每一個玩具，都是孩子想像力的延伸。
+              這裡不只有療癒的布偶、精緻的模型、還有你我都捨不得長大的回憶。 🌟
+              一起進入玩具的奇幻世界吧！
             </h5>
             <div className="input-group mb-0 mt-4">
-              <input
+              {/* <input
                 type="text"
                 className="form-control rounded-0"
                 placeholder=""
@@ -29,9 +31,9 @@ function Home() {
                   type="button"
                   id="search"
                 >
-                  Lorem ipsum
+                  收巡
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -39,7 +41,7 @@ function Home() {
           <div className="col-md-6 mt-md-4">
             <div className="card border-0 mb-4 position-relative position-relative">
               <img
-                src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
+                src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHRveXxlbnwwfHwwfHx8MA%3D%3D"
                 className="card-img-top rounded-0"
                 alt="..."
               />
@@ -47,12 +49,10 @@ function Home() {
                 <h4 className="mb-0 mt-4">Lorem ipsum</h4>
                 <div className="d-flex justify-content-between mt-3">
                   <p className="card-text text-muted mb-0 w-75">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod.
+                    嚴選電影經典角色，多款姿勢隨機出貨，每一隻都充滿呆萌個性。高品質
+                    PVC
+                    材質打造，是收藏與送禮首選，陪你一起耍廢放鬆、守護工作桌！
                   </p>
-                  <button className="btn btn-outline-dark rounded-0 text-nowrap">
-                    Lorem ipsum
-                  </button>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ function Home() {
           <div className="col-md-6 mt-md-4">
             <div className="card border-0 mb-4 position-relative position-relative">
               <img
-                src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
+                src="https://images.unsplash.com/photo-1558594155-f66a31feb3c8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg4fHx0b3l8ZW58MHx8MHx8fDA%3D"
                 className="card-img-top rounded-0"
                 alt="..."
               />
@@ -68,12 +68,8 @@ function Home() {
                 <h4 className="mb-0 mt-4">Lorem ipsum</h4>
                 <div className="d-flex justify-content-between mt-3">
                   <p className="card-text text-muted mb-0 w-75">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod.
+                    每一隻小動物都是原木手工製成，使用無毒水性漆彩繪，讓孩子在遊戲中學習動物名稱與空間概念。
                   </p>
-                  <button className="btn btn-outline-dark rounded-0 text-nowrap">
-                    Lorem ipsum
-                  </button>
                 </div>
               </div>
             </div>
@@ -81,7 +77,7 @@ function Home() {
           <div className="col-md-6 mt-md-4">
             <div className="card border-0 mb-4 position-relative position-relative">
               <img
-                src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
+                src="https://images.unsplash.com/photo-1716226694795-dd68877f7848?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fHRveXxlbnwwfHwwfHx8MA%3D%3D"
                 className="card-img-top rounded-0"
                 alt="..."
               />
@@ -89,12 +85,8 @@ function Home() {
                 <h4 className="mb-0 mt-4">Lorem ipsum</h4>
                 <div className="d-flex justify-content-between mt-3">
                   <p className="card-text text-muted mb-0 w-75">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod.
+                    以天然櫸木打造，圓角設計不傷手，適合1歲以上寶寶抓握推行。無毒塗層安全無虞，是寶寶最棒的第一台玩具車。
                   </p>
-                  <button className="btn btn-outline-dark rounded-0 text-nowrap">
-                    Lorem ipsum
-                  </button>
                 </div>
               </div>
             </div>
@@ -102,7 +94,7 @@ function Home() {
           <div className="col-md-6 mt-md-4">
             <div className="card border-0 mb-4 position-relative position-relative">
               <img
-                src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
+                src="https://images.unsplash.com/photo-1591449235870-2d8491bf51ff?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc2fHx0b3l8ZW58MHx8MHx8fDA%3D"
                 className="card-img-top rounded-0"
                 alt="..."
               />
@@ -110,12 +102,8 @@ function Home() {
                 <h4 className="mb-0 mt-4">Lorem ipsum</h4>
                 <div className="d-flex justify-content-between mt-3">
                   <p className="card-text text-muted mb-0 w-75">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod.
+                    一組復古積木玩具充滿童趣與色彩層次，讓人聯想到童年的無限創造力。
                   </p>
-                  <button className="btn btn-outline-dark rounded-0 text-nowrap">
-                    Lorem ipsum
-                  </button>
                 </div>
               </div>
             </div>
@@ -134,7 +122,7 @@ function Home() {
                 <div className="row justify-content-center py-7">
                   <div className="col-md-8 d-flex">
                     <img
-                      src="https://images.unsplash.com/photo-1490138139357-fc819d02e344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                      src="https://images.unsplash.com/photo-1694747993167-efb40717b869?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjcxfHx0b3l8ZW58MHx8MHx8fDA%3D"
                       alt=""
                       className="rounded-circle me-5"
                       style={{
@@ -145,12 +133,11 @@ function Home() {
                     />
                     <div className="d-flex flex-column">
                       <p className="h5">
-                        “Lorem ipsum dolor sit amet, consetetur sadipscing
-                        elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                        et dolore magna aliquyam erat.”
+                        「每一個玩具，都是孩子夢想的起點，
+                        陪伴他們長大，也喚醒我們心中的童年記憶。」
                       </p>
                       <p className="mt-auto text-muted">
-                        Lorem ipsum dolor sit amet.
+                        精選玩具，讓成長充滿想像與溫度。
                       </p>
                     </div>
                   </div>
@@ -237,59 +224,12 @@ function Home() {
         </div>
       </div>
       <div className="container my-7">
-        <div className="row">
-          <div className="col-md-4">
-            <img
-              src="https://images.unsplash.com/photo-1548689816-c399f954f3dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-              alt=""
-              style={{ width: "160px", height: "160px", objectFit: "cover" }}
-            />
-            <h4 className="mt-4">Lorem ipsum</h4>
-            <p className="text-muted">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna.
-            </p>
-          </div>
-          <div className="col-md-4">
-            <img
-              src="https://images.unsplash.com/photo-1548689816-c399f954f3dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-              alt=""
-              style={{ width: "160px", height: "160px", objectFit: "cover" }}
-            />
-            <h4 className="mt-4">Lorem ipsum</h4>
-            <p className="text-muted">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna.
-            </p>
-          </div>
-          <div className="col-md-4">
-            <img
-              src="https://images.unsplash.com/photo-1548689816-c399f954f3dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-              alt=""
-              style={{ width: "160px", height: "160px", objectFit: "cover" }}
-            />
-            <h4 className="mt-4">Lorem ipsum</h4>
-            <p className="text-muted">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna.
-            </p>
-          </div>
-        </div>
+        <div className="row"></div>
       </div>
       <div className="bg-light py-7">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-4 text-center">
-              <h3>Lorem ipsum</h3>
-              <p className="text-muted">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-              <button className="btn btn-dark mt-4 rounded-0">
-                Lorem ipsum
-              </button>
-            </div>
-            Add commentMore actions
+            <div className="col-md-4 text-center"></div>
           </div>
         </div>
       </div>
